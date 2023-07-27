@@ -1,7 +1,7 @@
 {
   "name": "md-vue-plugin-hiprint",
   "description": "支持低版本浏览器的改造",
-  "version": "0.0.55-beta2",
+  "version": "0.0.56",
   "license": "MIT",
   "main": "dist/vue-plugin-hiprint.js",
   "private": false,
@@ -27,10 +27,11 @@
     "rm_dist": "rimraf dist",
     "rm_releases": "rimraf releases",
     "rm_cache": "rimraf .cache",
-    "install-cnpm": "npm install -g cnpm@7.1.1 --registry=https://registry.npmmirror.com"
+    "install-cnpm": "npm install -g cnpm@7.1.1 --registry=https://registry.npmmirror.com",
+    "yalc_publish": "yalc publish"
   },
   "browserslist": [
-    "Chrome >= 45"
+    "Chrome >= 50"
   ],
   "devDependencies": {
     "@babel/runtime-corejs3": "^7.22.6",

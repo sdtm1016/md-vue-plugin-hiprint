@@ -11,7 +11,7 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
     filename: '[name]',
-    library: 'vue-plugin-hiprint',
+    library: 'md-vue-plugin-hiprint',
     libraryTarget: "umd",
     // libraryTarget: "commonjs2",
     umdNamedDefine: true
