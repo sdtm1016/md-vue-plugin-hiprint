@@ -1,18 +1,10 @@
 {
-  "name": "vue-plugin-hiprint",
-  "description": "hiprint for Vue2.x / Vue3.x 支持拖拽(分页(不分页)、表头表脚、样式设置、复制粘贴、缩放、撤销重做)生成打印模板、导出json模板数据、静默打印/获取MAC地址(借助客户端)",
+  "name": "md-vue-plugin-hiprint",
+  "description": "支持低版本浏览器的改造",
   "version": "0.0.55-beta2",
-  "author": "CcSimple",
   "license": "MIT",
   "main": "dist/vue-plugin-hiprint.js",
   "private": false,
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/CcSimple/vue-plugin-hiprint.git"
-  },
-  "bugs": {
-    "url": "https://github.com/CcSimple/vue-plugin-hiprint/issues"
-  },
   "keywords": [
     "vue",
     "hiprint",
@@ -27,21 +19,28 @@
     "build": "cross-env NODE_ENV=production webpack --progress",
     "pub": "npm run build && npm --registry https://registry.npmjs.org/ publish",
     "up-version": "node ./scripts/change-version.js",
-    "pub-beta": "npm run build && npm --registry https://registry.npmjs.org/ publish --tag beta"
+    "pub-beta": "npm run build && npm --registry https://registry.npmjs.org/ publish --tag beta",
+    "ii": "npm install --no-optional --registry https://registry.npmmirror.com",
+    "cnpm_ii": "cnpm install --no-optional",
+    "rm_cacheAndModules": "npm run rm_nodemodules && npm run rm_cache",
+    "rm_nodemodules": "rimraf node_modules",
+    "rm_dist": "rimraf dist",
+    "rm_releases": "rimraf releases",
+    "rm_cache": "rimraf .cache",
+    "install-cnpm": "npm install -g cnpm@7.1.1 --registry=https://registry.npmmirror.com"
   },
   "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
+    "Chrome >= 45"
   ],
   "devDependencies": {
+    "@babel/runtime-corejs3": "^7.22.6",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-service": "^4.5.15",
     "ant-design-vue": "^1.7.8",
     "bootstrap": "^3.3.7",
     "concurrent-tasks": "^1.0.7",
     "copy-webpack-plugin": "^5.1.2",
-    "core-js": "^3.6.5",
+    "core-js": "^3.31.1",
     "cross-env": "^5.0.5",
     "less-loader": "^6.1.1",
     "uglifyjs-webpack-plugin": "^2.2.0",
@@ -51,7 +50,16 @@
     "webpack-cli": "^4.9.1"
   },
   "dependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
+    "@babel/plugin-transform-runtime": "^7.22.9",
+    "@babel/preset-env": "^7.20.2",
     "@claviska/jquery-minicolors": "^2.3.6",
+    "autoprefixer": "^6.7.2",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^8.3.0",
+    "babel-plugin-dynamic-import-node": "^2.3.3",
     "canvg": "^3.0.10",
     "html2canvas": "^1.4.1",
     "jquery": "^3.6.0",
