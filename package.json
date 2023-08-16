@@ -1,7 +1,7 @@
 {
   "name": "md-vue-plugin-hiprint",
   "description": "支持低版本浏览器的改造",
-  "version": "0.0.58",
+  "version": "0.0.59",
   "license": "MIT",
   "main": "dist/md-vue-plugin-hiprint.js",
   "private": false,
@@ -24,10 +24,10 @@
     "serve": "vue-cli-service serve",
     "build-demo": "vue-cli-service build",
     "build": "cross-env NODE_ENV=production webpack --progress",
-    "pub": "npm run build && npm --registry https://registry.npmjs.org/ publish",
+    "pub": "npm run build && npm --registry=https://registry.npmjs.org/ publish",
     "up-version": "node ./scripts/change-version.js",
-    "pub-beta": "npm run build && npm --registry https://registry.npmjs.org/ publish --tag beta",
-    "ii": "npm install --no-optional --registry https://registry.npmmirror.com",
+    "pub-beta": "npm run build && npm --registry=https://registry.npmjs.org/ publish --tag beta",
+    "ii": "npm install --no-optional --registry=https://registry.npmmirror.com",
     "cnpm_ii": "cnpm install --no-optional",
     "rm_cacheAndModules": "npm run rm_nodemodules && npm run rm_cache",
     "rm_nodemodules": "rimraf node_modules",
@@ -75,6 +75,6 @@
     "jsbarcode": "^3.11.5",
     "jspdf": "^2.5.1",
     "nzh": "^1.0.8",
-    "socket.io-client": "^2.5.0"
+    "socket.io-client": "~2.2.0"
   }
 }
